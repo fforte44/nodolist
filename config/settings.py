@@ -133,18 +133,18 @@ LOGOUT_REDIRECT_URL = "nodolist:toppage"
 
 
 #Heroku database
-import dj_database_url
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
-db_from_env = dj_database_url.config(conn_max_age=600,
-ssl_require=True)
-DATABASES['default'].update(db_from_env)
-try:
- from .local_settings import *
-except ImportError:
- pass
-if not DEBUG:
- SECRET_KEY = 'django-insecure-!v@4p7c1)fok+@w=3tct-ia=t-!82(ykpitmt18rmy!1%862we' #削除したSECRET_KEYをコピペします
+# import dj_database_url
+# db_from_env = dj_database_url.config()
+# DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config(conn_max_age=600,
+# ssl_require=True)
+# DATABASES['default'].update(db_from_env)
+# try:
+#  from .local_settings import *
+# except ImportError:
+#  pass
+# if not DEBUG:
+SECRET_KEY = 'django-insecure-!v@4p7c1)fok+@w=3tct-ia=t-!82(ykpitmt18rmy!1%862we' #削除したSECRET_KEYをコピペします
 
-import django_heroku
-django_heroku.settings(locals())
+# import django_heroku
+# django_heroku.settings(locals())
