@@ -77,10 +77,21 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'nodolist',
+        'USER': "root",
+        'PASSWORD': 'ShiQ4981',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
@@ -132,7 +143,7 @@ LOGIN_REDIRECT_URL = "nodolist:post_list"
 LOGOUT_REDIRECT_URL = "nodolist:toppage"
 
 
-#Heroku database
+# Heroku database
 import dj_database_url
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
@@ -140,11 +151,11 @@ db_from_env = dj_database_url.config(conn_max_age=600,
 ssl_require=True)
 DATABASES['default'].update(db_from_env)
 try:
- from .local_settings import *
+    from .local_settings import *
 except ImportError:
- pass
+    pass
 if not DEBUG:
-SECRET_KEY = 'django-insecure-!v@4p7c1)fok+@w=3tct-ia=t-!82(ykpitmt18rmy!1%862we' #削除したSECRET_KEYをコピペします
+    SECRET_KEY = 'django-insecure-!v@4p7c1)fok+@w=3tct-ia=t-!82(ykpitmt18rmy!1%862we' #削除したSECRET_KEYをコピペします
 
 import django_heroku
 django_heroku.settings(locals())
