@@ -73,5 +73,5 @@ class PostTotalTimeView(ListView):
 
 
 def toppage(request):
-    image = Image.objects.get(pk=3)
+    image = Image.objects.get(pk=1)
     return render(request, "nodolist/toppage.html", {"image": image})
