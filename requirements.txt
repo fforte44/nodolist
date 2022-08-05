@@ -42,7 +42,7 @@ psycopg2==2.9.3
 # pthread-stubs==0.4
 pycodestyle==2.8.0
 pyflakes==2.4.0
-python==3.9.13
+# python==3.9.13
 python_abi==3.9
 pytz==2022.1
 readline==8.1.2
