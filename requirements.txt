@@ -13,7 +13,7 @@ flake8==4.0.1
 # giflib==5.2.1
 gunicorn==20.1.0
 importlib-metadata==2.0.0
-jpeg==9e
+# jpeg==9e
 krb5==1.19.3
 lcms2==2.12
 lerc==3.0
