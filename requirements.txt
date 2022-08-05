@@ -33,7 +33,7 @@ importlib-metadata==2.0.0
 # mysql-common==8.0.29
 # mysql-libs==8.0.29
 mysqlclient==2.0.3
-ncurses==6.3
+# ncurses==6.3
 openjpeg==2.4.0
 openssl==3.0.5
 pillow==9.2.0
