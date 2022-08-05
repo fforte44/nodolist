@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('tasks', models.CharField(max_length=40)),
                 ('text', models.TextField(blank=True, null=True)),
-                ('complete_time', models.TimeField()),
+                ('complete_time', models.IntegerField()),
                 ('tags', models.ManyToManyField(to='nodolist.Tag', verbose_name='Tagモデルのname')),
             ],
         ),

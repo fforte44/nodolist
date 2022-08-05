@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='post',
             name='complete_time',
-            field=models.IntegerField(),
+            # field=models.IntegerField(),
         ),
     ]
