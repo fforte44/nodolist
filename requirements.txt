@@ -15,7 +15,7 @@ gunicorn==20.1.0
 importlib-metadata==2.0.0
 # jpeg==9e
 # krb5==1.19.3
-lcms2==2.12
+# lcms2==2.12
 lerc==3.0
 libcxx==14.0.6
 libdeflate==1.12
